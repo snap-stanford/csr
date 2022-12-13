@@ -19,7 +19,7 @@ To install requirements:
 pip install -r requirements.txt
 ```
 
-To get NELL, FB15K-237 and ConceptNet data, including raw triplets, preprocessed data, embedding and checkpoints: https://drive.google.com/drive/folders/1HKrC4dr6JJDVhO8dqBkH2ixTejmAhh6e?usp=sharing
+Download [NELL](http://snap.stanford.edu/csr/NELL.zip), [FB15K-237](http://snap.stanford.edu/csr/FB15K-237.zip) and [ConceptNet](http://snap.stanford.edu/csr/ConceptNet.zip) data, including both raw triplets and preprocessed data. Download [embedding](http://snap.stanford.edu/csr/embedding.zip) for all datasets. Alternatively, download from [google drive](https://drive.google.com/drive/folders/1HKrC4dr6JJDVhO8dqBkH2ixTejmAhh6e?usp=sharing). After download these data, please unzip them under the top level of this repo.
 
 To replicate the preprocessing of the data from the raw triplets:
 1. Extract subgraphs using `python graph_extractions/graph_sampler.py`. 
@@ -72,7 +72,7 @@ python main.py --device 0 --wandb_name <wandb_name> --prefix CSR-CN-inductive-GN
 
 ## Evaluation and Pre-trained Models
 
-Pretrained models can be found under `checkpoints/` after downloading. Bellow are example commands for evaluation with NELL datasets and NELL pretrained models:
+Pretrained models can be downloaded [here](http://snap.stanford.edu/csr/checkpoints.zip). Bellow are example commands for evaluation with NELL datasets and NELL pretrained models:
 
 CSR-GNN on NELL transductive setting:
 ```
@@ -157,3 +157,17 @@ Our model achieves the following performances:
 |             | CSR-GNN            |     0.606       |      0.611     |
 
 See full results in our paper.
+
+## Citations
+
+If you use this repo, please cite the following paper. This repo is mainly based on [MetaR](https://github.com/AnselCmy/MetaR) repo, and code in `subgraph_extraction/` is largely borrowed from [Grail](https://github.com/kkteru/grail).
+
+```
+@inproceedings{
+ csr2022,
+ title={Few-shot Relational Reasoning via Connection Subgraph Pretraining},
+ author={Qian Huang, Hongyu Ren and Jure Leskovec},
+ booktitle={Neural Information Processing Systems},
+ year={2022}
+}
+```
