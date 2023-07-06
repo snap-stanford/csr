@@ -1,6 +1,8 @@
 
 # Few-shot Relational Reasoning via Connection Subgraph Pretraining (NeurIPS 2022)
 
+Paper: https://arxiv.org/abs/2210.06722
+
 We propose Connection Subgraph Reasoner (CSR) to make predictions for the few-shot relational reasoning task directly by self-supervised pre-training over knowledge graphs. 
 
 ![main figure](./pictures/figure.png)
